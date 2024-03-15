@@ -185,8 +185,8 @@ def attachEndpoints(app: Flask):
     def httpSubscription(sub_type: str):
         user_agent = request.headers.get('User-Agent', 'unknown').lower()
         account = getCurrentAccount(logger)
-        best = request.args.get('best', 'false').lower() == "true" or False
-        random_name = request.args.get('randomName', 'false').lower() == "true" or False
+        best = request.args.get('best', 'true').lower() == "true" or False
+        random_name = request.args.get('randomName', 'true').lower() == "true" or False
         proxy_format = request.args.get('proxyFormat', 'full').lower()
         ipv6 = request.args.get('ipv6', 'false').lower() == "true" or False
 
