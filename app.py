@@ -48,7 +48,7 @@ def linuxStartWeb():
     app = createApp("web")
     FlaskGunicornApp(app, options={
         "bind": f"{HOST}:{PORT}",
-        "workers": 4,
+        "workers": 2,
         "worker_connections": 1000,
         "timeout": 30,
         "keepalive": 2
